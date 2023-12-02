@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::fs;
+use common;
 
 fn solve_part1(content: &str) -> i32 {
     content.lines().filter(|l| !l.is_empty()).map(|l| {
@@ -32,7 +32,7 @@ fn solve_part2(content: &str) -> i32 {
 }
 
 fn main() {
-    let content = fs::read_to_string("input.txt").expect("File not found!");
+    let content = common::get_lines_as_string("day01/input.txt");
     let result_part1 = solve_part1(&content);
     println!("Result part1: {}", result_part1);
     println!("Part1 54940 is correct");
