@@ -1,12 +1,11 @@
 use std::collections::HashMap;
-use common;
 
 fn solve_part1(content: &str) -> i32 {
     content.lines().filter(|l| !l.is_empty()).map(|l| {
         let first = l.chars().find(|c| c.is_numeric()).unwrap();
-        let last = l.chars().rfind(|c| c.is_numeric()).unwrap_or_else(|| '\0');
+        let last = l.chars().rfind(|c| c.is_numeric()).unwrap_or('\0');
 
-        String::from(format!("{}{}", first, last)).parse::<i32>().unwrap()
+        format!("{}{}", first, last).parse::<i32>().unwrap()
     }).sum()
 }
 
