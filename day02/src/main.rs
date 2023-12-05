@@ -75,11 +75,10 @@ fn solve_part2<T: AsRef<str>>(lines: impl Iterator<Item=T>) -> i32 {
 const CUBES: Cubes = Cubes { red: 12, green: 13, blue: 14 };
 fn main() {
     let lines = common::get_lines_from_file("day02/input.txt");
-    let non_empty_lines: Vec<_> = lines.into_iter().filter(|l| !l.is_empty()).collect();
-    let result_part1 = solve_part1(non_empty_lines.iter());
+    let result_part1 = solve_part1(lines.iter());
     println!("Result part1: {}", result_part1);
     println!("Part1 2369 is correct");
-    let result_part2 = solve_part2(non_empty_lines.iter());
+    let result_part2 = solve_part2(lines.iter());
     println!("Result part2: {}", result_part2);
     println!("Part2 66363 is correct");
 }

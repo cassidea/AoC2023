@@ -101,8 +101,7 @@ fn solve_part2(numbers: &[Number]) -> u32 {
 
 fn main() {
     let lines = common::get_lines_from_file("day03/input.txt");
-    let non_empty_lines: Vec<_> = lines.into_iter().filter(|l| !l.is_empty()).collect();
-    let result_part1 = solve_part1(non_empty_lines);
+    let result_part1 = solve_part1(lines);
     println!("Result part1: {}", result_part1.0);
     println!("Part1 521515 is correct");
     let result_part2 = solve_part2(&result_part1.1);
