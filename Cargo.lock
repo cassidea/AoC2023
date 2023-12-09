@@ -67,6 +67,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "day05"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "regex",
+]
+
+[[package]]
+name = "day06"
+version = "0.1.0"
+dependencies = [
+ "common",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
